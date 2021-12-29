@@ -3,7 +3,6 @@ import styled from 'styled-components';
 export const DasboardContainer = styled.div`
   transition: background 1000ms;
   height: 100vh;
-  /* background: ${({ theme }) => (theme === 'light' ? '#636f7d' : 'black')}; */
   background-color: #e6e6e6;
   display: flex;
   align-items: center;
@@ -14,17 +13,13 @@ export const AnimateBlock = styled.div`
   width: 20vw;
   height: 60vw;
   margin-top: 10vw;
-  /* background-color: tan; */
-  transition: ${({ coords }) =>
-    coords.x !== null && coords.y !== null ? '300ms linear' : '1000ms'};
-  transform: ${({ coords }) =>
-    `rotateY(${-coords.x}deg) rotateX(${coords.y}deg)`};
   display: flex;
   flex-direction: column;
   align-items: center;
+  transition: 0.2s;
   p {
+    
     user-select: none;
-
     color: #43383e;
     font-size: 2vw;
     &:first-of-type {
